@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: ${DB_URL_TODO:jdbc:mysql://localhost:3306/todo_service_db?useSSL=false&serverTimezone=UTC}
+    username: ${DB_USER:root}
+    password: ${DB_PASS:Lovesh@123}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+user-service:
+  url: ${USER_SERVICE_URL:http://localhost:8081}
